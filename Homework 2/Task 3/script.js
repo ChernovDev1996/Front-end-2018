@@ -1,16 +1,20 @@
 
-
-// Не работает цикл, выводит в таблицу первое значение только. What could possibly go wrong?
-
-// var a = 0;
-// var b = 100;
+// Четные не выводит, я хз почему - задал if (a % 2 == 0) как внешнее условие
+var a = +prompt();
+var b = +prompt();
 
 
-// if (a >= 0 && b <= 100) {
-// for(i = a; i % 2 == 0; i++) {
-//     document.write("<table style='border: 1px solid black'> <tr> <td>" + i + "</td> </tr> </table>");
-// }
-// }
+if (a && b) { 
+    if (a % 2 == 0) {
+    document.write("<table style='border: 1px solid black'>");
+        // for (i = a, j = b; i >= 0 && j <= 100; i++) {
+        //     document.write("<tr> <td>" + i + "</tr> </td>");
+        // }  Тут вообще страшные вещи творятся, браузеру - хана) 
+        for (i = a; i < 100 && i > 0; i++) {
+            document.write("<tr> <td style='border: 1px solid black'>" + i + "</tr> </td>")
+        }
+    document.write("</table>");
+}}
 
 
 
