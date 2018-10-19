@@ -93,7 +93,7 @@
 // console.log(arrA + " Look at the first digit (should be the smallest)");
 // console.log(arrA + " Look at the last digit (the biggest?)");
 
-// Что-то я короче не въехал в суть задания, поменять как?
+// Что-то я короче не въехал в суть задания, поменять именно как min & max?
 
 
 
