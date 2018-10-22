@@ -24,35 +24,32 @@
 // 2
 
 
-n = 5;
-m = 5;
-A = new Array(n)
+// n = 5;
+// m = 5;
+// A = new Array(n)
 
-for(i = 0; i < A.length; i++){
-    A[i] = new Array(m);
-}
+// for(i = 0; i < A.length; i++){
+//     A[i] = new Array(m);
+// }
 
 
-rowSumToCompare = 0;
+// sum = 0;
+// sumToCompare = 0;
 
-for(i = 0; i < A.length; i++){
-    for(j = 0; j < A[i].length; j++){
-        A[i][j] = Math.floor(Math.random()*100);
-        // rowSumToCompare = rowSumToCompare + A[i][j];
-        
-        if(A[i][j] < A[i].length)
-         {
-            rowSumToCompare = rowSumToCompare + A[i][j];
-            console.log(rowSumToCompare)}
-            else {
-                rowSumToCompare = 0;
 
-            }
-    }}
+// for(i = 0; i < A.length; i++){
+//     for(j = 0; j < A[i].length; j++){
+//         A[i][j] = Math.floor(Math.random()*100);
 
-    console.log(rowSumToCompare)
+//         sum += A[i][j];
+    
+//     }
+// if (sum > sumToCompare) {
+//     sumToCompare = sum;
+//     console.log(sumToCompare)
+// }
+// }
 
-// console.log(rowSumToCompare)
 
 
 // 1) В одномерном массиве произвести такую замену:
