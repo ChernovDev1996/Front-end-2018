@@ -24,31 +24,48 @@
 // 2
 
 
-// n = 5;
-// m = 5;
-// A = new Array(n)
-
-// for(i = 0; i < A.length; i++){
-//     A[i] = new Array(m);
-// }
-
-
-// sum = 0;
-// sumToCompare = 0;
+n = 5;
+m = 5;
+A = new Array(n);
+B = new Array();
+for(i = 0; i < A.length; i++){
+    A[i] = new Array(m);
+}
 
 
-// for(i = 0; i < A.length; i++){
-//     for(j = 0; j < A[i].length; j++){
-//         A[i][j] = Math.floor(Math.random()*100);
 
-//         sum += A[i][j];
-    
-//     }
-// if (sum > sumToCompare) {
-//     sumToCompare = sum;
-//     console.log(sumToCompare)
-// }
-// }
+for(i = 0; i < A.length; i++){
+    sum = 0;
+    for(j = 0; j < A[i].length; j++){
+        A[i][j] = Math.floor(Math.random()*100);
+        
+        sum += A[i][j];
+    }
+   
+
+    if(i == 0) {
+        minSum = sum;
+        sumPosmin = i;
+        maxSum = sum;
+        sumPosmax = i;
+
+    } else if (sum < minSum) {
+        minSum = sum;
+        sumPosmin = i;
+    }
+    else if (sum > maxSum) {
+        maxSum = sum;
+        sumPosmax = i;
+    }
+
+
+    if(i == sumPosmin) {
+      
+    }
+    else if(i == sumPosmax) {
+      
+    }
+}
 
 
 
