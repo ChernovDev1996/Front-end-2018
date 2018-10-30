@@ -125,16 +125,16 @@
 
 //5
 
-function filter(input, isEven) {
-  var input = [1, 2, 3, 4, 5, 6];
-  var x = input.length;
+// function filter(input, isEven) {
+//   var input = [1, 2, 3, 4, 5, 6];
+//   var x = input.length;
 
 
-  function isEven(x) { return x % 2 == 0; }
+//   function isEven(x) { return x % 2 == 0; }
   
 
-  console.log(filter(input, isEven));
-}
+//   console.log(filter(input, isEven));
+// }
 
 
 
