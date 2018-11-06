@@ -8,28 +8,30 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
 .wrapper-nav {
-    padding-left: 150px;
-    max-width: 1200px;
+    padding-left: 200px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
 /* Upper body part */
+/* Navigation styling */
 
 .upper-body {
     background-image: url("img/header-background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
+    height: 100%;
 }
 
 
@@ -38,10 +40,22 @@ body {
     text-decoration: none;
     display: flex;
     flex-direction: row;
+    padding: 55px 0 60px 0;
+    font-size: 13px;
+    font-weight: 100;
 }
 
 .main-nav__navlist__item {
+    text-transform: uppercase;
     margin-right: 35px;
+}
+.main-nav__navlist__item a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #929292;
+}
+.main-nav__navlist__item a:hover {
+    color: #a7d2db;
 }
 
 
@@ -51,16 +65,157 @@ body {
     text-decoration: none;
     display: flex;
     flex-direction: row;
+    font-size: 13px;
 }
 
 .lower-navs__list__items--first {
-    
     padding-right: 50px;
-    border-right: 1px solid black;
-    border-width: 20%;  
+    border-right: 0.5px solid #929292;
+    border-width: 20%;
+}
+.lower-navs__list__items--first a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #929292;
+    text-transform: uppercase;
+}
+.lower-navs__list__items--first a:hover {
+    color: #a7d2db;
+}
+
+.lower-navs__list__items {
+    padding: 0 50px 0 50px;
+    border-right: 0.5px solid #929292;
+    border-left: 0.5px solid #929292;
+    border-color: #929292;
+    text-transform: uppercase;
+}
+.lower-navs__list__items a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #929292;
+}
+
+.lower-navs__list__items a:hover {
+    color: #a7d2db;
 }
 
 
+.lower-navs__list__items--last {
+    text-transform: uppercase;
+    padding-left: 50px;
+    border-left: 0.5px solid #929292;
+    border-width: 20%;  
+}
+
+.lower-navs__list__items--last a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #929292;
+}
+.lower-navs__list__items--last a:hover {
+    color: #a7d2db;
+}
+
+/* End of navigation styling */
+
+/* Upper part main part styling */
+
+.empty-legs-primary__h1 {
+    font-size: 104px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 80px;
+    color: #555555;
+}
+
+.empty-legs-primary__divforquote {
+display: flex;
+flex-direction: row;
+color: #555555;
+}
+
+.empty-legs-primary__hr {
+    border-top: 2px solid #555555;
+    width: 70px;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+.empty-legs-primary__quote {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.empty-legs-primary__link  {
+    margin-left: 60%;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #a7d2db;
+}
+
+.fa-caret-right {
+    color:  #a7d2db;
+    opacity: .5;
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+
+.empty-legs-primary_p {
+    margin-top: 45px;
+    color: #555555;
+}
+
+/* End of upper body main part styling */
+
+
+
+
+
+/* middle part styling */
+.middle-body {
+    background: #a7d2db;
+    margin-top: 125px;
+    padding: 160px 0;
+}
+
+
+.middle-body__grid {
+    color: #555555;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    
+}
+.middle-body__grid__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.middle-body__grid__item__rotated-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: rotate(270deg);
+    margin-right: -30px;
+    margin-left: -50px;
+}
+.middle-body__grid__item__rotated-element p {
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+
+.rotate-element__hr {
+    padding-top: 15px;
+    border-bottom: 2px solid  white;
+    opacity: .5;
+    width: 60px;
+    margin: 0 10px;
+}
 
 
 
@@ -70,6 +225,16 @@ body {
 /* Lower body part */
 .lower-body {
 background-image: url("img/main-background.png");
-background-repeat: no-repeat;
-background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    text-align: center;
 }
+
+
+.lower-body__table {
+    margin: 0 auto;
+    text-align: left;
+}
+
