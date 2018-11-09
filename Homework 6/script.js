@@ -124,18 +124,41 @@
 
 
 //5
-
-// function filter(input, isEven) {
-//   var input = [1, 2, 3, 4, 5, 6];
-//   var x = input.length;
+// function filter(testArray, testFunction) {
+//     var innerArray = [];
 
 
-//   function isEven(x) { return x % 2 == 0; }
-  
-
-//   console.log(filter(input, isEven));
+//     for(var i = 0; i < testArray.length; i++) {
+//         if(testFunction(testArray[i]) == true) {
+//             innerArray.push(testArray[i]);
+//         }
+//     }
+//     return innerArray;
 // }
 
 
+// var filter = filter([1,2,3,4,5,6,7,8], function(x) {
+//     return x % 2 == 0;
+// });
+
+// console.log(filter);
 
 
+
+
+
+
+
+// var attitude = function(original, replacement, source) {
+//     return function(source) {
+//       return source.replace(original, replacement);
+//     };
+//   };
+  
+//   var snakify = attitude(/millenials/ig, "Snake People");
+//   var hippify = attitude(/baby boomers/ig, "Aging Hippies");
+  
+//   console.log(snakify("The Millenials are always up to something."));
+//   // The Snake People are always up to something.
+//   console.log(hippify("The Baby Boomers just look the other way."));
+//   // The Aging Hippies just look the other way.
