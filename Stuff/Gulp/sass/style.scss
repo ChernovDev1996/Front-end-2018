@@ -1,0 +1,19 @@
+$paragraph-color: green;
+
+
+
+
+p {
+    color: $paragraph-color;
+}
+ul {
+padding: 20px;
+margin: 20px;
+font-size: 70px;
+    li {
+        color: green;
+        padding: 20px;
+        background: yellow;
+    }
+}
+
