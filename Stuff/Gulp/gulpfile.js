@@ -3,7 +3,8 @@ var gulp = require("gulp"),
     sass = require('gulp-sass'),
     plumber = require('gulp-plumber'),
     livereload = require('gulp-livereload'),
-    imgcompressor = require('gulp-imagemin');
+    imgcompressor = require('gulp-imagemin'),
+    autoprefixer = require('gulp-autoprefixer');
 
 sass.compiler = require("node-sass");
 
@@ -37,6 +38,7 @@ gulp.task('sass', function() {
     gulp.src('./sass/**/*.scss')
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('./css'))
     .pipe(livereload());
 });
@@ -62,6 +64,13 @@ gulp.task('imgcompressor', function() {
         .pipe(imgcompressor())
         .pipe(gulp.dest('./img'))
     });
+
+
+gulp.task('autoprefixer', function() {
+    gulp.src('./css/style.css')
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('./css/style.css'));
+});
 
 
 gulp.task("default", ['scripts', 'styles', 'watch', 'sass'])
