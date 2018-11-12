@@ -46,7 +46,7 @@ gulp.task('sass', function() {
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('./script.js', ['scripts']);
-    gulp.watch('./style.css', ['styles']);
+    gulp.watch('./sass/style.scss', ['styles', 'sass']);
 });
 
 
