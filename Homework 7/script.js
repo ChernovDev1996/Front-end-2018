@@ -1,5 +1,3 @@
-// ---------------------------------------------
-
 //1
 // function middleOfArgs(args) {
 //     args = arguments;
@@ -65,6 +63,8 @@
 // 4
 
 
+// V1
+
 //     function doFunction() {
 
 
@@ -92,7 +92,7 @@
 // }
 
 
-
+// V2
 
 // function doFunction() {
 
@@ -112,25 +112,3 @@
 
 //     return factorial;
 // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 3) Из п.2 реализовать функции sum, div, mul, power
-
-// `doFunction(16, -23, mul); // 16*(-23)`
-
-// 4) Из п.2, если количество числовых аргументов равно единице и переданная функция `factorial` - реализовать расчет факторикала. `doFunction(6, factorial);`, 
-// в ответе поулчаем 6! = 720. // arguments.length и typeof
