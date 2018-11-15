@@ -1,26 +1,33 @@
-//1
-// function middleOfArgs(args) {
-//     args = arguments;
-//     var arrayForCentral = [];
+// 1
+function middleOfArgs() {
 
-//     var middle = Math.ceil(args.length / 2) - 1;
+    var arrayForCentral = [];
 
-//     for (var i = 0; i < args.length; i++) {
-//         if(args.length % 2 == 0) {
-//             var even = args.splice(middle, 2);
-//             arrayForCentral = arrayForCentral.concat(even);
-//         }
-//         else {
-//             var odd = args.splice(middle, 1);
-//             arrayForCentral = arrayForCentral.concat(odd);
-//         }
+for(i = 0; i < arguments.length; i++) {
 
-//     }
-//     console.log(arrayForCentral);
-// }
+    var middle = Math.ceil(arguments[i].length / 2) - 1;
+
+    if(arguments[i].length % 2 ==0) {
+        var even = arguments[i].splice(middle, 2);
+        arrayForCentral.push(even);
+    }
+
+    else {
+        var odd = arguments[i].splice(middle, 1);
+        arrayForCentral.push(odd);
+    }
+    
+}
+
+return arrayForCentral;
+
+}
 
 
-// middleOfArgs([1,2,3,4,5], [1,2,3,4,5,6]);
+console.log(middleOfArgs([1,2,3,4,5], [1,2,3,4,5,6], [2,3,4,6,56,34,76], [2,3,4,6,56,34,76,75,98,121]));
+
+
+
 
 
 //2 
@@ -92,23 +99,15 @@
 // }
 
 
-// V2
+// // V2
 
 // function doFunction() {
 
-//     if(arguments.length = 2 && typeof arguments[0] == !isNaN) {
+//     if(arguments.length = 2 && typeof arguments[0] == !NaN) {
 //         return func(arguments[0], arguments[1]);
 //     }
 
 
 // }
 
-// doFunction(6, function factorial(){
-//     var factorial = 1;
-
-//     for(var i = 1; i <= arguments[0]; i++) {
-//         factorial = factorial * i;
-//     }
-
-//     return factorial;
-// })
+// doFunction(6, factorial());
