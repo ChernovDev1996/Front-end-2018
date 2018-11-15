@@ -1,30 +1,30 @@
 // 1
-function middleOfArgs() {
+// function middleOfArgs() {
 
-    var arrayForCentral = [];
+//     var arrayForCentral = [];
 
-for(i = 0; i < arguments.length; i++) {
+// for(i = 0; i < arguments.length; i++) {
 
-    var middle = Math.ceil(arguments[i].length / 2) - 1;
+//     var middle = Math.ceil(arguments[i].length / 2) - 1;
 
-    if(arguments[i].length % 2 ==0) {
-        var even = arguments[i].splice(middle, 2);
-        arrayForCentral.push(even);
-    }
+//     if(arguments[i].length % 2 ==0) {
+//         var even = arguments[i].splice(middle, 2);
+//         arrayForCentral.push(even);
+//     }
 
-    else {
-        var odd = arguments[i].splice(middle, 1);
-        arrayForCentral.push(odd);
-    }
+//     else {
+//         var odd = arguments[i].splice(middle, 1);
+//         arrayForCentral.push(odd);
+//     }
     
-}
+// }
 
-return arrayForCentral;
+// return arrayForCentral;
 
-}
+// }
 
 
-console.log(middleOfArgs([1,2,3,4,5], [1,2,3,4,5,6], [2,3,4,6,56,34,76], [2,3,4,6,56,34,76,75,98,121]));
+// console.log(middleOfArgs([1,2,3,4,5], [1,2,3,4,5,6], [2,3,4,6,56,34,76], [2,3,4,6,56,34,76,75,98,121]));
 
 
 
@@ -33,15 +33,13 @@ console.log(middleOfArgs([1,2,3,4,5], [1,2,3,4,5,6], [2,3,4,6,56,34,76], [2,3,4,
 //2 
 
 //     function doFunction(number1, number2, func) {
-//         var number1 = number1;
-//         var number2 = number2;
 
 //         return func(number1, number2);
 // }
 
-// doFunction(4,4, function power(number1, number2) {
-//     return console.log(Math.pow(number1, number2));
-// });
+// console.log(doFunction(4,4, function power(number1, number2) {
+//     return Math.pow(number1, number2);
+// }));
 
 
 
@@ -99,9 +97,9 @@ console.log(middleOfArgs([1,2,3,4,5], [1,2,3,4,5,6], [2,3,4,6,56,34,76], [2,3,4,
 // }
 
 
-// // V2
+// // // V2
 
-// function doFunction() {
+// function doFunction(number1, func) {
 
 //     if(arguments.length = 2 && typeof arguments[0] == !NaN) {
 //         return func(arguments[0], arguments[1]);
