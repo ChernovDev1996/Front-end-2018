@@ -126,40 +126,36 @@
 // Lection
 // 1
 
-// object = {
-//     x: 10,
-//     y: 20,
-//     inner: {
-//         x: 20,
-//         z: 30
-//     },
-//     foo2: {
-//         k: 23,
-//         p: 13
-//     }
-// }
+object = {
+    x: 10,
+    y: 20,
+    inner: {
+        x: 20,
+        z: 30
+    },
+    foo2: {
+        k: 23,
+        p: 13
+    }
+}
 
-// function convert(obj) {
-//     var newObj = {};
-//         // newObj.x = object.inner.x;
-//         // newObj.y = object.y;
-//         // newObj.z = object.inner.z;
-//         // newObj.k = object.foo2.k;
-//         // newObj.p = object.foo2.p;
+function convert(obj) {
+    var newObj = {};
+    for (var key in obj){
+        if (typeof obj[key] == 'object') {
+            for (var key2 in obj[key]) {
+                newObj[key2] = obj[key][key2];
+            }
+        }else{
+            newObj[key] = obj[key];
+        }
+    }
+    return newObj;
+}
 
-//     for(key in obj) {
+console.log(convert(object));
 
-
-//     }
-
-
-
-//     return newObj;
-// }
-
-// console.log(convert(object));
-
-
+//2
 // var list = [1,2,3,4,45,5,6]
 
 // console.log(list);
@@ -182,3 +178,13 @@
 
 // console.log(list.myReverse());
 
+
+//3
+
+
+
+function assignObject(obj1, obj2) {
+
+
+    
+}
