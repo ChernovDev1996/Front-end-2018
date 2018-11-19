@@ -8,46 +8,81 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />           //several folders = inputs, buttons, tables, main, 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 </head>
 
 <body>
+<!-- <header>
+    <main>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+
+    <footer></footer>
+</header> -->
+
+
+
+
+
 <section class="upper-body">
     <div class="wrapper-nav">
-        <header>
+        <header>                                                                              //wrapper-nav || header + style of wrapper-nav
             <nav class="main-nav">
                 <ul class="main-nav__navlist">
-                    <li class="main-nav__navlist__item"> <a href="">Чартеры</a></li>
+                    <li class="main-nav__navlist__item"> <a href="">Чартеры</a></li>                //main-nav__navlist-item
                     <li class="main-nav__navlist__item"> <a href="">Покупка/продажа</a></li>
                     <li class="main-nav__navlist__item"> <a href="">Менеджемент ВС</a></li>
                     <li class="main-nav__navlist__item"> <a href="">Авиационный консалтинг</a></li>
                     <li class="main-nav__navlist__item"> <a href="">Услуги</a></li>
                     <li class="main-nav__navlist__item"> <a href="">О компании</a></li>
                     <li class="main-nav__navlist__item"> <a href="">Контакты</a></li>
-                    <li class="main-nav__navlist__item"> <a href="">EN</a></li>
+                    <li class="main-nav__navlist__item"> <a href="">EN</a></li> 
                 </ul>
             </nav>
 
-    <ul class="lower-navs__list">
-        <li class="lower-navs__list__items--first"> <a href="">Бизнес <br/> чартеры</a></li>
-        <li class="lower-navs__list__items"> <a href="">Групповые <br/> чартеры</a></li>
+                                                                                                        <!-- //nav > a possible -->
+
+                                                                                <!-- Correct
+                                                                                            <header class="header">
+                                                                                                <div class="header__left">
+                                                                                                    <nav class="header__nav header__nav--bright">
+                                                                                                        <ul class="header__ul">
+                                                                                                            <li class="header__li"></li>
+                                                                                                            <li class="header__li"></li>
+                                                                                                            <li class="header__li"></li>
+                                                                                                            <li class="header__li"></li>
+                                                                                                        </ul>
+                                                                                                    </nav>
+                                                                                                </div>
+                                                                                            </header> -->
+
+
+
+
+    <ul class="lower-navs__list"> //lower-navs
+        <li class="lower-navs__list__items--first"> <a href="">Бизнес <br/> чартеры</a></li>                //lower-navs__item--first
+        <li class="lower-navs__list__items"> <a href="">Групповые <br/> чартеры</a></li>                       //a href="#"
         <li class="lower-navs__list__items"> <a href="">Групповые <br/> чартеры</a></li>
         <li class="lower-navs__list__items"> <a href="">Медицинские <br/> чартеры</a></li>
         <li class="lower-navs__list__items"> <a href="">Empty <br/> Legs</a></li>
-        <li class="lower-navs__list__items--last"> <a href="">Вертолеты</a></li>
+        <li class="lower-navs__list__items--last"> <a href="">Вертолеты</a></li>// list-item
     </ul>
+    </header>                                                                               // internal before external + main should take (sect1+2+3) + footer
 </div>
-</header>
+
 
 
 <main>
 <div class="wrapper">
-    <div class="empty-legs-primary">
+    <div class="empty-legs-primary"> //empty-legs empty-legs--primary
         <h1 class="empty-legs-primary__h1">Рейсы empty legs</h1>
         <div class="empty-legs-primary__divforquote">
-                <div class="empty-legs-primary__hr"></div>
+                <div class="empty-legs-primary__hr"></div> //empty-legs__vertical-line
             <blockquote class="empty-legs-primary__quote">Когда компания Company организует чартерный перелет
                 в один конец, то <br> зачастую самолет при возвращении на свою базу
                 или при продолжении <br> перелета в другое место летит пустым. 
@@ -77,13 +112,13 @@
         <div class="middle-body__grid">
             <div class="middle-body__grid__item">
 
-                <div class="middle-body__grid__item__rotated-element">
+                <div class="middle-body__grid__item__rotated-element">                                     // separate block???
                     <div class="rotate-element__hr"></div>
-                    <p>01</p>
+                    <p>01</p>  //span/div
                 </div>
 
                 <div class="middle-body__grid__item__main-element">
-                    <h3>Большая экономия</h3>
+                    <h3>Большая экономия</h3>                                                               //one <h1></h1>
                     <p>Ваша экономия до 75% от <br> стоимости обычного <br> чартера</p>
                 </div>
     
@@ -244,7 +279,7 @@
         <button class="lower-body__button"><a href="">Еще рейсы</a><i class="fas fa-caret-right"></i></button>
     </div>
 </section>
-</main>
+</main>                                                                                                     // main cannot overlap two sections
 
 <footer>
     <div class="wrapper">

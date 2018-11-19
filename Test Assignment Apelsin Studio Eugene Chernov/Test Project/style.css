@@ -1,5 +1,26 @@
+/* fonts to the main.scss -- fontastic */
+
+
+
+
 
 /* Technical part */
+
+/* .lower-navs{
+    
+    &__item:first-child {
+
+    }
+
+    &__item:last-list {
+
+        
+    }
+    
+}*/
+
+
+
 
 * {
     margin: 0;
@@ -310,7 +331,7 @@ th:nth-child(2) {
 th:nth-child(4) {
     border-left: solid 2px rgba(0,0,0,0.2);
     
-}
+}                                                                                                                     //th:last-child {border:none}
 
 
  td {
