@@ -16,7 +16,7 @@
 //         var odd = arguments[i].splice(middle, 1);
 //         arrayForCentral.push(odd);
 //     }
-    
+
 // }
 
 // return arrayForCentral;
@@ -46,8 +46,7 @@
 // 3
 
 //     function doFunction(number1, number2, func) {
-//         var number1 = number1;
-//         var number2 = number2;
+//     
 
 //         return func(number1, number2);
 // }
@@ -80,7 +79,7 @@
 //         else {
 //             return func(arguments[0], arguments[1]);
 //          }
-         
+
 // }
 
 // doFunction(4, factorial());

@@ -15,19 +15,19 @@
 //     }
 // }
 
-// function convert(obj) {
-//     var newObj = {};
-//     for (var key in obj){
-//         if (typeof obj[key] == 'object') {
-//             for (var key2 in obj[key]) {
-//                 newObj[key2] = obj[key][key2];
-//             }
-//         }else{
-//             newObj[key] = obj[key];
-//         }
-//     }
-//     return newObj;
-// }
+function convert(obj) {
+    var newObj = {};
+    for (var key in obj) {
+        if (typeof obj[key] == 'object') {
+            for (var key2 in obj[key]) {
+                newObj[key2] = obj[key][key2];
+            }
+        } else {
+            newObj[key] = obj[key];
+        }
+    }
+    return newObj;
+}
 
 // console.log(convert(object));
 
