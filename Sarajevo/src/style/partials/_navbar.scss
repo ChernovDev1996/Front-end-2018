@@ -1,0 +1,28 @@
+.hero-background-section__navbar {
+  color: white;
+
+  .hero-background-section__navbar-brand {
+    font-size: 20px;
+    &:hover {
+      opacity: 0.5;
+    }
+    .hero-background-section__navbar-brand-span {
+      color: blue;
+    }
+  }
+
+  .navbar-nav .nav-item {
+    padding-left: 35px;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: 12px;
+  }
+  .navbar-nav .nav-item .nav-link:hover {
+    border-top: 3px solid blue;
+    color: white;
+    transition: 0.2s;
+    opacity: 0.8;
+  }
+}
