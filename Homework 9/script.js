@@ -30,13 +30,11 @@
 //         return this;
 //     },
 
-
 //     target: 'result',
 //     result: '',
 // };
 
-
-// 2 
+// 2
 // function transformString(string) {
 
 //     var stringSplit = string.split('');
@@ -62,7 +60,6 @@
 //         }
 //     }
 
-
 //     if (arrForLetters[7] == "T") {
 //         arrForLetters[7] = arrForLetters[7].toLowerCase();
 //     }
@@ -86,11 +83,9 @@
 //                     checkArray.push(string[j]);
 //                 }
 
-
 //             }
 //         }
 //     }
-
 
 //     if (checkArray.length < string.length) {
 //         return false;
@@ -105,11 +100,8 @@
 // Какой-то баг словил, выдает мне в тест-массив на одну букву больше (foo --> fooo),
 // плюс с финальным чеком не все так гладко)
 
-
-
 // Homework
 // 1
-
 
 // function renderObject() {
 
@@ -122,8 +114,6 @@
 //     }
 // }
 
-
-
 // obj = {
 //     Name: "Peter",
 //     Surname: "Griffin",
@@ -132,10 +122,7 @@
 //     peterActs: renderObject,
 // }
 
-
-
 // console.log(obj.peterActs());
-
 
 // 2
 // function sum(a, b) {
@@ -167,10 +154,7 @@
 //     OutputOne: '',
 // }
 
-
 // console.log(obj.m1ThreeParams(sum, 10, 12).m2ChangeOutput("Hello").m3ClearOutput());
-
-
 
 // 3 & 4
 
@@ -184,8 +168,7 @@
 //                 for (key in arguments[i]) {
 //                     this[key] = arguments[i][key];
 //                 }
-//             } 
-
+//             }
 
 //             else if (arguments[arguments.length - 1] == true) {
 
@@ -215,6 +198,5 @@
 //     x: 50,
 //     k: 60
 // }, true);
-
 
 // console.log(data);
