@@ -10,17 +10,19 @@
 //         return this;
 //     },
 //     doFunction: function (func, a, b) {
-//         this[this.target] = func(a, b);
+        // var targetProp = this.target;
+        // this[targetProp] = func(a, b);
+
 
 //         return this;
 //     },
 //     clear: function () {
 //         this[this.target] = 0;
 
-//         return this;
+//         return tfhis;
 //     },
 
-//     targetFunc: function (key) {
+//     targetFunc: unction (key) {
 //         this[key] = key;
 
 //         this.target = key;
@@ -191,7 +193,7 @@
 //                     for (key in arguments[i]) {
 //                         if (this[datakey] == arguments[i][key]) {
 //                             console.log("OO")
-//                             this.datakey = this.datakey;
+//                             this.datakey = arguments[i][key];
 //                         }
 
 //                     }
