@@ -121,10 +121,22 @@
 // git reset --hard --soft HEAD (tilda) 2
 
 
-data = {
+dataOne = {
     x: 12,
     y: 3,
     znak: '/'
+}
+
+dataTwo = {
+    x: 9,
+    y: 3,
+    znak: '*'
+}
+
+dataThree = {
+    x: 6,
+    y: 3,
+    znak: '+'
 }
 
 function SuperMath(x, y, znakString) {
@@ -133,8 +145,8 @@ function SuperMath(x, y, znakString) {
     this.znakString = znakString;
 
     this.znak = function () {
-        if (typeof znakString == 'string') {
-            switch (znakString) {
+        if (typeof this.znakString == 'string') {
+            switch (this.znakString) {
                 case '/':
                     console.log(this.x / this.y);
                     break;
@@ -147,28 +159,29 @@ function SuperMath(x, y, znakString) {
                 case '-':
                     console.log(this.x - this.y);
                     break;
-
             }
         }
-
     }
 }
-
-
 var newMath = new SuperMath(1, 1, '/');
 
 
 newMath.check = function (obj) {
 
-    for (key in obj) {
-        if (type)
+    this.x = obj.x;
+    this.y = obj.y;
+    this.znakString = obj.znak;
 
-
+    if (confirm('Wanna take some -znak- action, Boss?') == true) {
+        return this.znak();
     }
+
 
 };
 
-newMath.check(data);
+newMath.check(dataOne);
+newMath.check(dataTwo);
+newMath.check(dataThree);
 
 
 
@@ -182,5 +195,3 @@ newMath.check(data);
 
 // p = new SuperMath();
 // p.check(obj); // --> no p.input() -> 3 prompt -> считает
-
-

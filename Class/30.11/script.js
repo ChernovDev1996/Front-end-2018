@@ -1,204 +1,6 @@
-// obj.key == "Hello";
-
-// key = 'some'
-// obj[key] = "Hello"
-// obj['key'] == "Hello";
-
-// key: "Hello";
-
-// 1. git--version
-
-// 2. git init
-
-// 3. git remote add origin < url > -"remote"
-// and "add" - name of distanced repo - origin - < url >
-
-//         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-// 4. git status
-
-
-
-
-// Four states:
-
-//         unmodified, modified, tracked / in index, commited
-
-
-
-
-// 5. git add.
-
-// 6. git commit - m "Update"
-
-
-// 7. git branch
-
-// 8. git branch Dev
-
-// 9. git checkout Dev
-// git checkout - b dev-- --create and
-// switch to dev
-
-// 10. git branch - D dev-- --deleting a branch
-
-
-
-
-
-
-// //     Home Lection
-
-// git checkout - b EXAMPLE
-
-// git add.
-
-// git commit - m "c1"
-
-
-
-// git log - 1-- - history of commits
-// git log - 2-- - two last
-
-// git commit--amend-- -- -- -- -- ++ + i(insert in VIM)
-
-// Exit from VIM
-//         : wq-- - write & quit
-
-
-// git push--force origin EXAMPLE-- - always when history is re - recorded with--amend
-
-
-// git merge example(dev1 - ads to example)
-
-
-
-// git checkout - b Dev2
-
-//         ++console.log();
-
-
-// git merge dev2(merge with master) --fastforward
-
-
-// git checkout - b Dev3
-
-// git checkout master
-
-// git merge--no - ff Dev3
-
-
-// git reset--hard HEAD~1
-
-
-
-
-// // rebase
-
-// git checkout - b dev4
-
-//         +
-//         commit etc
-
-
-// back to master
-
-// ++commit etc
-
-
-// checkout to dev4
-
-// git rebase master
-
-// git add.
-// git rebase--
-// continue
-
-// git push--force origin dev4
-
-
-
-// git reset --hard --soft HEAD (tilda) 2
-
-
-// data = {
-//     x: 12,
-//     y: 3,
-//     znak: '/'
-// }
-
-// function SuperMath(x, y, znakString) {
-//     this.x = x;
-//     this.y = y;
-//     this.znakString = znakString;
-
-//     this.znak = function () {
-//         if (typeof znakString == 'string') {
-//             switch (znakString) {
-//                 case '/':
-//                     console.log(this.x / this.y);
-//                     break;
-//                 case '*':
-//                     console.log(this.x * this.y);
-//                     break;
-//                 case '+':
-//                     console.log(this.x + this.y);
-//                     break;
-//                 case '-':
-//                     console.log(this.x - this.y);
-//                     break;
-
-//             }
-//         }
-
-//     }
-// }
-
-
-// var newMath = new SuperMath(1, 1, '/');
-
-
-// newMath.check = function (obj) {
-
-//     for (key in obj) {
-//         if (type)
-
-
-//     }
-
-// };
-
-// newMath.check(data);
-
-
-
-
-// 1) Создать класс SuperMath.Добавить к экземпляру метод - check(obj), параметр obj которого имеет свойства X, Y, znak.Метод должен
-//  подтвердить у пользователя хочет ли он произвести действие znak c Х и У.
-// Если - да, сделать математическое действие znak
-// (которое описано в прототипе), иначе - запросить ввод новых данных через метод input() класса SuperMath.
-// Пример обекта: `obj = { X:12, Y:3, znak: “/”}`, возможные варианты znak => `+ - / * %`.
-// При вводе znak нужно сделать проверку корректности ввода на возможные математические действия
-
-// p = new SuperMath();
-// p.check(obj); // --> no p.input() -> 3 prompt -> считает
-
-
-
-
-
-
-
-
-
-
-// constructor.prototype = new constructor();
-
-// constructor.prototype = Object.create(constructor.prototype)
-
-
 function SuperArray(n, m, obj) {
-
+    this.min = obj.min;
+    this.max = obj.max;
 
     var arrayConstructor = new Array(n);
 
@@ -220,25 +22,18 @@ function SuperArray(n, m, obj) {
 }
 
 
-
-
-
-
-
-
-
-
-
-var newSupArr = new SuperArray(3, 6, { min: 10, max: 55 });
+var newSupArr = new SuperArray(5, 6, {
+    min: 10,
+    max: 55
+});
 
 
 console.log(newSupArr);
 
 
 
+// 1
 SuperArray.prototype.render = function (separator) {
-
-
 
     for (var i = 0; i < this.arrayUpd.length; i++) {
         for (var j = 0; j < this.arrayUpd[i].length; j++) {
@@ -256,25 +51,152 @@ SuperArray.prototype.render = function (separator) {
 
     this.arrayUpd = arrayConstructor;
 
+
+    return this;
+
 }
 
-
+// 2
 SuperArray.prototype.clear = function (direction, k) {
 
     if (direction == "row") {
         for (var j = 0; j < this.arrayUpd[k].length; j++) {
             this.arrayUpd[k][j] = 0;
         }
+    } else if (direction == "column") {
+        for (var j = 0; j < this.arrayUpd[k].length; j++) {
+            this.arrayUpd[j][k] = 0;
+        }
     }
-
-    else if (direction == "column") {
-
-    }
+    return this;
 }
 
-newSupArr.clear("row", 2)
+// 3
+SuperArray.prototype.setMarker = function (obj) {
+    var x = obj.x;
+    var y = obj.y;
+
+    for (var i = 0; i < this.arrayUpd.length; i++) {
+        for (var j = 0; j < this.arrayUpd[i].length; j++) {
+            this.arrayUpd[x][y] = "&";
+        }
+    }
+    return this;
+}
+
+
+// 4
+SuperArray.prototype.goTo = function (obj) {
+
+    var x = obj.x;
+    var y = obj.y;
+
+    for (var i = 0; i < this.arrayUpd.length; i++) {
+        for (var j = 0; j < this.arrayUpd[i].length; j++) {
+            if (this.arrayUpd[i][j] == "&") {
+                this.arrayUpd[i][j] = Math.floor(Math.random() * (this.max - this.min) + this.min);
+            }
+            this.arrayUpd[x][y] = "&";
+        }
+    }
+    return this;
+}
 
 
 
+// 5
+SuperArray.prototype.shift = function (direction) {
+
+    for (var i = 0; i < this.arrayUpd.length; i++) {
+        for (var j = 0; j < this.arrayUpd[i].length; j++) {
+            switch (direction) {
+                case "up":
+                    if (this.arrayUpd[i][j] == "&") {
+                        this.arrayUpd[i][j] = Math.floor(Math.random() * (this.max - this.min) + this.min);
+                        this.arrayUpd[i - 1][j] = "&";
+                    }
+                    break;
+                case "right":
+                    if (this.arrayUpd[i][j] == "&") {
+                        this.arrayUpd[i][j] = Math.floor(Math.random() * (this.max - this.min) + this.min);
+                        this.arrayUpd[i][j + 1] = "&";
+                    }
+                    break;
+                case "down":
+                    if (this.arrayUpd[i][j] == "&") {
+                        this.arrayUpd[i][j] = Math.floor(Math.random() * (this.max - this.min) + this.min);
+                        this.arrayUpd[i + 1][j] = "&";
+                    }
+                    break;
+                case "left":
+                    if (this.arrayUpd[i][j] == "&") {
+                        this.arrayUpd[i][j] = Math.floor(Math.random() * (this.max - this.min) + this.min);
+                        this.arrayUpd[i][j - 1] = "&";
+                    }
+                    break;
+
+            }
+        }
+    }
+
+    return this;
+}
 
 
+newSupArr.setMarker({
+    x: 2,
+    y: 3
+});
+
+newSupArr.goTo({
+    x: 2,
+    y: 5
+});
+
+newSupArr.shift("up").shift("left");
+
+
+
+Создать игру:
+
+    Есть поле field, является экземпляром класса Field(width, height),
+    предпочитаемые размеры 10 на 10.
+
+Есть герой person, класс Person(name, XPosition, YPosition)
+
+
+Поле являет собой двумерный массив, который состоит из нулей.
+Там где находится наш герой - стоит 1.
+
+Field имеет такие методы:
+    *
+    renderField() - выводит поле в document, устанавливает разделители `<hr />`
+сверху и снизу
+    *
+    clearField() - убирает героя с доски *
+    changeSize(newX, newY) - меняет размер поля
+
+Person имеет такие методы:
+    *
+    start() - герой появляется на доске *
+    go(direction, step) - движение по переданом параметру *
+    (direction может быть: 'left', 'right', 'top', 'bottom') и с шагом step *
+    resetPosition() - перенос в начальную позицию
+
+
+Нужно самим решить какие методы получают аргументы, какие нет.Организовывать код можно
+любым образом.
+
+Вызов методов происходит из консоли.
+
+
+Суть такая:
+
+    field.renderField();
+person.start();
+person.go('left', 2);
+person.go('top', 1);
+field.renderField();
+
+последовательно вызываются команды, renderField - отображает новую доску в document.
+В результате мы должны увидеть 2 нарисованных состояния поля.
