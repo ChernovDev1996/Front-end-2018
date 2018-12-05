@@ -18,7 +18,7 @@ function Field(height, width) {
   Field.prototype.arrayComplete = this.arrayComplete;
 
   // Start of methods
-  Field.prototype.renderField = function() {
+  Field.prototype.renderField = function () {
     document.write("<hr />");
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
@@ -31,7 +31,7 @@ function Field(height, width) {
     return this;
   };
 
-  Field.prototype.clearField = function() {
+  Field.prototype.clearField = function () {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (j = 0; j < this.arrayComplete[i].length; j++) {
         this.arrayComplete[i][j] = 0;
@@ -40,7 +40,7 @@ function Field(height, width) {
     return this;
   };
 
-  Field.prototype.changeSize = function(newX, newY) {
+  Field.prototype.changeSize = function (newX, newY) {
     this.arrayComplete = new Array(newY);
     for (var i = 0; i < this.arrayComplete.length; i++) {
       this.arrayComplete[i] = new Array(newX);
@@ -55,12 +55,13 @@ function Field(height, width) {
   };
 }
 
-function Person(name, XPosition, YPosition) {
+function Person(name, XPosition, YPosition, field) {
   var horizontalLoc = XPosition;
   var verticalLoc = YPosition;
+  // this.field = field;
 
   // Methods
-  this.start = function() {
+  this.start = function () {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
         this.arrayComplete[verticalLoc][horizontalLoc] = name;
@@ -70,7 +71,7 @@ function Person(name, XPosition, YPosition) {
     return this;
   };
 
-  this.go = function(direction, step) {
+  this.go = function (direction, step) {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
         switch (direction) {
@@ -104,7 +105,7 @@ function Person(name, XPosition, YPosition) {
     return this;
   };
 
-  this.resetPosition = function() {
+  this.resetPosition = function () {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
         if (this.arrayComplete[i][j] == name) {
@@ -126,91 +127,91 @@ player.go("left", 4);
 player.resetPosition();
 gameField.renderField();
 
-// Class methods
+// // Class methods
 
-// 3
-SuperArray.prototype.setMarker = function(obj) {
-  var x = obj.x;
-  var y = obj.y;
+// // 3
+// SuperArray.prototype.setMarker = function(obj) {
+//   var x = obj.x;
+//   var y = obj.y;
 
-  for (var i = 0; i < this.arrayUpd.length; i++) {
-    for (var j = 0; j < this.arrayUpd[i].length; j++) {
-      this.arrayUpd[x][y] = "&";
-    }
-  }
-  return this;
-};
+//   for (var i = 0; i < this.arrayUpd.length; i++) {
+//     for (var j = 0; j < this.arrayUpd[i].length; j++) {
+//       this.arrayUpd[x][y] = "&";
+//     }
+//   }
+//   return this;
+// };
 
-// 4
-SuperArray.prototype.goTo = function(obj) {
-  var x = obj.x;
-  var y = obj.y;
+// // 4
+// SuperArray.prototype.goTo = function(obj) {
+//   var x = obj.x;
+//   var y = obj.y;
 
-  for (var i = 0; i < this.arrayUpd.length; i++) {
-    for (var j = 0; j < this.arrayUpd[i].length; j++) {
-      if (this.arrayUpd[i][j] == "&") {
-        this.arrayUpd[i][j] = Math.floor(
-          Math.random() * (this.max - this.min) + this.min
-        );
-      }
-      this.arrayUpd[x][y] = "&";
-    }
-  }
-  return this;
-};
+//   for (var i = 0; i < this.arrayUpd.length; i++) {
+//     for (var j = 0; j < this.arrayUpd[i].length; j++) {
+//       if (this.arrayUpd[i][j] == "&") {
+//         this.arrayUpd[i][j] = Math.floor(
+//           Math.random() * (this.max - this.min) + this.min
+//         );
+//       }
+//       this.arrayUpd[x][y] = "&";
+//     }
+//   }
+//   return this;
+// };
 
-// 5
-SuperArray.prototype.shift = function(direction) {
-  for (var i = 0; i < this.arrayUpd.length; i++) {
-    for (var j = 0; j < this.arrayUpd[i].length; j++) {
-      switch (direction) {
-        case "up":
-          if (this.arrayUpd[i][j] == "&") {
-            this.arrayUpd[i][j] = Math.floor(
-              Math.random() * (this.max - this.min) + this.min
-            );
-            this.arrayUpd[i - 1][j] = "&";
-          }
-          break;
-        case "right":
-          if (this.arrayUpd[i][j] == "&") {
-            this.arrayUpd[i][j] = Math.floor(
-              Math.random() * (this.max - this.min) + this.min
-            );
-            this.arrayUpd[i][j + 1] = "&";
-          }
-          break;
-        case "down":
-          if (this.arrayUpd[i][j] == "&") {
-            this.arrayUpd[i][j] = Math.floor(
-              Math.random() * (this.max - this.min) + this.min
-            );
-            this.arrayUpd[i + 1][j] = "&";
-          }
-          break;
-        case "left":
-          if (this.arrayUpd[i][j] == "&") {
-            this.arrayUpd[i][j] = Math.floor(
-              Math.random() * (this.max - this.min) + this.min
-            );
-            this.arrayUpd[i][j - 1] = "&";
-          }
-          break;
-      }
-    }
-  }
+// // 5
+// SuperArray.prototype.shift = function(direction) {
+//   for (var i = 0; i < this.arrayUpd.length; i++) {
+//     for (var j = 0; j < this.arrayUpd[i].length; j++) {
+//       switch (direction) {
+//         case "up":
+//           if (this.arrayUpd[i][j] == "&") {
+//             this.arrayUpd[i][j] = Math.floor(
+//               Math.random() * (this.max - this.min) + this.min
+//             );
+//             this.arrayUpd[i - 1][j] = "&";
+//           }
+//           break;
+//         case "right":
+//           if (this.arrayUpd[i][j] == "&") {
+//             this.arrayUpd[i][j] = Math.floor(
+//               Math.random() * (this.max - this.min) + this.min
+//             );
+//             this.arrayUpd[i][j + 1] = "&";
+//           }
+//           break;
+//         case "down":
+//           if (this.arrayUpd[i][j] == "&") {
+//             this.arrayUpd[i][j] = Math.floor(
+//               Math.random() * (this.max - this.min) + this.min
+//             );
+//             this.arrayUpd[i + 1][j] = "&";
+//           }
+//           break;
+//         case "left":
+//           if (this.arrayUpd[i][j] == "&") {
+//             this.arrayUpd[i][j] = Math.floor(
+//               Math.random() * (this.max - this.min) + this.min
+//             );
+//             this.arrayUpd[i][j - 1] = "&";
+//           }
+//           break;
+//       }
+//     }
+//   }
 
-  return this;
-};
+//   return this;
+// };
 
-newSupArr.setMarker({
-  x: 2,
-  y: 3
-});
+// newSupArr.setMarker({
+//   x: 2,
+//   y: 3
+// });
 
-newSupArr.goTo({
-  x: 2,
-  y: 5
-});
+// newSupArr.goTo({
+//   x: 2,
+//   y: 5
+// });
 
-newSupArr.shift("up").shift("left");
+// newSupArr.shift("up").shift("left");

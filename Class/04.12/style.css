@@ -1,0 +1,17 @@
+
+#blockId1 {
+background-color: red;
+}
+#blockId2 {
+   background-color:yellow; 
+}
+#blockId3 {
+    background-color:blue;
+}
+.block {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 100px;
+}
