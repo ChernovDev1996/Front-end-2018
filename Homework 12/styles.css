@@ -1,0 +1,9 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 760px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: azure;
+}
