@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   function inputsTransfer() {
     var inputs = document.querySelectorAll(".inputField");
     var textField = document.querySelector(".textZone");
@@ -17,5 +17,5 @@ window.onload = function() {
     }
   }
 
-  setTimeout(inputsTransfer, 10000);
+  setInterval(inputsTransfer, 7000);
 };
