@@ -1,0 +1,22 @@
+.hero {
+    background-image: url('../img/Background.png');
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+
+
+    &__title-block {
+        max-width: 50%;
+        margin: 10vh auto;
+    }
+
+    &__button-block {
+        max-width: 50%;
+        margin: 10vh auto;
+    }
+    &__brands-img-wrapper {
+        margin-top: 25px;
+    }
+}

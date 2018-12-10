@@ -19,25 +19,27 @@ window.onload = function () {
 
   // setInterval(inputsTransfer, 7000);
   function inputsTransfer() {
-    var inputOne = document.querySelector("#inputFieldOne");
-    var inputTwo = document.querySelector("#inputFieldTwo");
-    var inputThree = document.querySelector("#inputFieldThree");
+    inputOne = document.querySelector("#inputFieldOne");
+    inputTwo = document.querySelector("#inputFieldTwo");
+    inputThree = document.querySelector("#inputFieldThree");
     var textField = document.querySelector(".textZone");
 
     var arrayInputs = [inputOne.value, inputTwo.value, inputThree.value];
 
-    if (inputOne !== "") {
+    if (inputOne.value !== "") {
       textField.value = arrayInputs[0];
     }
-    else { console.log("Filled") }
-    if (inputOne !== "" && inputTwo !== "") {
-      textField.value = arrayInputs[0] + "\n" + arrayInputs[1];
+
+
+    if (inputOne.value !== "" && inputTwo.value !== "") {
+      textField.value = arrayInputs[0] + "," + arrayInputs[1];
     }
-    else { console.log("Filled") }
-    if (inputOne !== "" && inputTwo !== "" && inputThree !== "") {
-      textField.value = arrayInputs[0] + "\n" + arrayInputs[1] + "\n" + arrayInputs[2];
+
+
+    if (inputOne.value !== "" && inputTwo.value !== "" && inputThree.value !== "") {
+      textField.value = arrayInputs[0] + "," + arrayInputs[1] + "," + arrayInputs[2];
     }
-    else { console.log("Filled") }
+
   }
 
   setInterval(inputsTransfer, 400);
