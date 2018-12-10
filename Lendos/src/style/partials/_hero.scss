@@ -1,22 +1,72 @@
 .hero {
     background-image: url('../img/Background.png');
-      background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
+    width: 100vw;
 
 
     &__title-block {
         max-width: 50%;
         margin: 10vh auto;
+        color: white;
+    }
+
+    &__title-block-title {
+        letter-spacing: 8px;
+
+    }
+
+    &__title-block-subtitle {
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 8px;
     }
 
     &__button-block {
         max-width: 50%;
-        margin: 10vh auto;
+        margin: 20vh auto;
     }
+
+    &__button-block-button {
+        padding: 20px 30px;
+        border: 1px solid white;
+        font-size: 18px;
+        color: white;
+        transition: all .2s;
+
+        &:link {
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: rgba($color: white, $alpha: .2);
+            color: white;
+            font-weight: $bold;
+            padding: 25px 35px;
+            box-shadow: 2px 2px 15px 1px black;
+        }
+    }
+
     &__brands-img-wrapper {
-        margin-top: 25px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__brands-img {
+        height: 50%;
+    }
+
+
+    &__brands {
+        background-color: rgba(255, 255, 255, .3)
+    }
+
+    &__brands-paragraph {
+        color: white;
+        text-shadow: 1px 2px 4px #000000;
     }
 }

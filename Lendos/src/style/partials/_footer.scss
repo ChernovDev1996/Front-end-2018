@@ -1,0 +1,62 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 5vh 0;
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__list-social {
+        list-style-type: none;
+    }
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 576px) {
+
+    .footer {
+        padding: 0;
+
+        &__list {
+            text-align: center;
+            padding-left: 0;
+            font-size: 20px;
+        }
+
+
+
+        &__paragraph {
+            text-align: center;
+        }
+
+
+        &__list-social {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            padding-left: 0;
+
+        }
+
+        &__list-social-item {
+            padding-top: 20px;
+            margin: 0 auto;
+        }
+
+        &__list-social-img {
+            width: 30px;
+        }
+
+    }
+
+
+
+
+}
