@@ -18,7 +18,7 @@ function Field(height, width) {
   Field.prototype.arrayComplete = this.arrayComplete;
 
   // Start of methods
-  Field.prototype.renderField = function () {
+  Field.prototype.renderField = function() {
     document.write("<hr />");
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
@@ -31,7 +31,7 @@ function Field(height, width) {
     return this;
   };
 
-  Field.prototype.clearField = function () {
+  Field.prototype.clearField = function() {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (j = 0; j < this.arrayComplete[i].length; j++) {
         this.arrayComplete[i][j] = 0;
@@ -40,7 +40,7 @@ function Field(height, width) {
     return this;
   };
 
-  Field.prototype.changeSize = function (newX, newY) {
+  Field.prototype.changeSize = function(newX, newY) {
     this.arrayComplete = new Array(newY);
     for (var i = 0; i < this.arrayComplete.length; i++) {
       this.arrayComplete[i] = new Array(newX);
@@ -61,7 +61,7 @@ function Person(name, XPosition, YPosition, field) {
   // this.field = field;
 
   // Methods
-  this.start = function () {
+  this.start = function() {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
         this.arrayComplete[verticalLoc][horizontalLoc] = name;
@@ -71,7 +71,7 @@ function Person(name, XPosition, YPosition, field) {
     return this;
   };
 
-  this.go = function (direction, step) {
+  this.go = function(direction, step) {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
         switch (direction) {
@@ -105,7 +105,7 @@ function Person(name, XPosition, YPosition, field) {
     return this;
   };
 
-  this.resetPosition = function () {
+  this.resetPosition = function() {
     for (var i = 0; i < this.arrayComplete.length; i++) {
       for (var j = 0; j < this.arrayComplete[i].length; j++) {
         if (this.arrayComplete[i][j] == name) {

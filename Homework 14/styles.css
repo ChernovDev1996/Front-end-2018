@@ -1,0 +1,14 @@
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 760px;
+    height: 100vh;
+    padding: 25px;
+    background-color: azure;
+}
+
+.heroElement {
+    background-color: green;
+    position: absolute;
+    transition: all .7s;
+}
