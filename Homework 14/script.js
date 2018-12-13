@@ -11,8 +11,6 @@ window.onload = function () {
     var xPos = 0;
     var yPos = 0;
 
-    console.log(this.heroElem);
-
     this.drawHero = function () {
       this.heroWrap.appendChild(this.heroElem);
       actionArea.appendChild(this.heroWrap);
