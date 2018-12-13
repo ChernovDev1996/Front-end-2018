@@ -21,29 +21,41 @@ window.onload = function () {
 
     this.moveHero = function (keyCode, step) {
       if (keyCode == 37) {
+        this.heroElem.style.backgroundColor = "yellow";
         xPos += step;
         this.heroElem.style.right = xPos + "px";
       } else if (keyCode == 38) {
+        this.heroElem.style.backgroundColor = "yellow";
         yPos -= step;
         this.heroElem.style.top = yPos + "px";
       } else if (keyCode == 39) {
+        this.heroElem.style.backgroundColor = "yellow";
         xPos -= step;
         this.heroElem.style.right = xPos + "px";
       } else if (keyCode == 40) {
+        this.heroElem.style.backgroundColor = "yellow";
         yPos += step;
         this.heroElem.style.top = yPos + "px";
       }
+      setTimeout(() => {
+        this.heroElem.style.backgroundColor = "green";
+      }, 3000);
       return this;
     }
 
     this.jumpHero = function (keyCode, jump) {
       if (keyCode == 32) {
         var curTop = this.heroElem.offsetTop;
+        this.heroElem.style.backgroundColor = "red";
         this.heroElem.style.top = curTop - jump + 'px';
         setTimeout(() => {
           this.heroElem.style.top = curTop + 'px';
         }, 300);
       }
+
+      setTimeout(() => {
+        this.heroElem.style.backgroundColor = "green";
+      }, 500);
       return this;
     }
 
@@ -55,6 +67,7 @@ window.onload = function () {
         var initHeight = this.heroElem.offsetHeight * 1.0;
         var squezedWidth = this.heroElem.offsetWidth * 1.25;
         var initWidth = this.heroElem.offsetWidth * 1.0;
+        this.heroElem.style.backgroundColor = "blue";
         this.heroElem.style.marginTop = '40px';
         this.heroElem.style.height = squezedHeight + 'px';
 
@@ -67,7 +80,8 @@ window.onload = function () {
           this.heroElem.style.marginTop = '0px';
           this.heroElem.style.height = initHeight + 'px';
           this.heroElem.style.width = initWidth + 'px';
-        }, 700);
+          this.heroElem.style.backgroundColor = "green";
+        }, 800);
       }
 
       return this;
