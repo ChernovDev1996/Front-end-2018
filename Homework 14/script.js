@@ -95,11 +95,8 @@ window.onload = function() {
     }
     newHero.moveHero(event.keyCode, 5);
     newHero.jumpHero(event.keyCode, 100);
-    document.addEventListener("keypress", function(event) {
-      newHero.squezeHero(event.keyCode);
-    });
-    document.addEventListener("keyup", function(event) {
-      newHero.unsquezeHero(event.keyCode);
-    });
+    newHero.squezeHero(event.keyCode);
+    document.addEventListener("keypress", function(event) {});
+    document.addEventListener("keyup", function(event) {});
   });
 };
