@@ -103,6 +103,12 @@ window.onload = function () {
     newHero.moveHero(event.keyCode, 5);
     newHero.jumpHero(event.keyCode, 100);
     newHero.squezeHero(event.keyCode);
+    document.addEventListener('keypress', function (event) {
+
+    });
+    document.addEventListener('keyup', function (event) {
+
+    });
   });
 
 };
