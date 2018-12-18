@@ -2,6 +2,7 @@
     &__header {
         background-color: #1c1121;
         opacity: .7;
+        transition: all .5s;
     }
 
     &__header-wrapper {
@@ -46,10 +47,12 @@
         color: white;
         font-size: 1.2em;
         border-top: 2px solid transparent;
-        transition: all .3s;
+        transition: all .5s;
     }
 
-
+ &__navbar-navigation {
+     transition: all .5s;
+ }
     &__navbar-burger {
         display: none;
     }
@@ -62,11 +65,20 @@
 @media screen and (max-width: 768px) {
 
     .hero {
-
-        &__header {
+        .active {
+            display: flex;
+        }
+        .hidden {
+            display: none;
+        }
+        .transparent {
+            background-color: transparent;
+        }
+        &__header { 
             background-color: #1c1121;
             opacity: .7;
             width: 100%;
+            position: relative;
         }
 
         &__header-wrapper {
@@ -92,19 +104,24 @@
 
             color: white;
             font-size: 1.5em;
-            transition: all .3s;
-            margin-left: 20px;
+            margin-left: 25px;
         }
 
-        &__navbar-navigation-link {
+
+        &__navbar-navigation {
             display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__navbar-navigation-link {
+            padding-top: 20px;
         }
 
 
         &__navbar-burger {
             font-size: 1.5em;
             display: block;
-            position: absolute;
+            position: fixed;
             top: 1.5rem;
             bottom: 1.5rem;
             right: 1rem;
