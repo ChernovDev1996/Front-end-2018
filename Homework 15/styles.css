@@ -1,0 +1,21 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 760px;
+
+    height: 80vh;
+    background-color: azure;
+}
+
+.block {
+    padding: 20px;
+    background-color: rosybrown;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-clear,
+.button-set {
+    margin-left: 25%;
+}

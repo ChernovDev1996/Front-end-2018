@@ -66,11 +66,16 @@ window.onload = function() {
         this.heroElem.style.backgroundColor = "blue";
         this.heroElem.style.marginTop = "40px";
         this.heroElem.style.height = squezedHeight + "px";
-
-        setTimeout(() => {
-          this.heroElem.style.width = squezedWidth + "px";
-        }, 50);
+        this.heroElem.style.width = squezedWidth + "px";
       }
+      setTimeout(() => {
+        var initHeight = this.heroElem.offsetHeight * 1.0;
+        var initWidth = this.heroElem.offsetWidth * 1.0;
+        this.heroElem.style.marginTop = "0px";
+        this.heroElem.style.height = initHeight + "px";
+        this.heroElem.style.width = initWidth + "px";
+        this.heroElem.style.backgroundColor = "green";
+      }, 500);
       return this;
     };
 
@@ -96,7 +101,8 @@ window.onload = function() {
     newHero.moveHero(event.keyCode, 5);
     newHero.jumpHero(event.keyCode, 100);
     newHero.squezeHero(event.keyCode);
-    document.addEventListener("keypress", function(event) {});
-    document.addEventListener("keyup", function(event) {});
+
+    // document.addEventListener("keypress", function(event) {});
+    // document.addEventListener("keyup", function(event) {});
   });
 };
