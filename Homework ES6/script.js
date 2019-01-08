@@ -45,29 +45,22 @@
 // };
 
 
-window.onload = function () {
-  document.querySelector('.app').innerHTML = `
-    <h2>Here is our data</h2>
-    ${data.map(item => {
-      return `
-      <div class ="card">
-       <div class ="card__content">
-            <p>Title:${item.title}</p> 
-            <p>Price:${item.size}</p> 
-            <p>Image:${item.img}</p> 
-         </div>
-      </div>
-    `
-    }).join('')}
-  `
-};
 
 class ViewController {
-  constructor(cardClass, contentClass) {
+  constructor(data, cardClass, contentClass) {
+    this.data = data;
     this.cardClass = cardClass;
     this.contentClass = contentClass;
   }
 
+  render() {
+    return `
+    <h2>Here is our data</h2>
+    ${this.data.map(item => {
+      return this.displayHTML(item);
+    }).join('')}
+  `
+  }
 
   displayHTML(item) {
     return `
@@ -84,10 +77,15 @@ class ViewController {
   sortData(data) {
 
   }
+
+  m1() {
+    return this;
+  }
+
+  m2() {
+    return this;
+  }
 }
-
-const newController = new ViewController('card', 'card__content');
-
 
 
 const data = [{
@@ -103,6 +101,15 @@ const data = [{
   size: 22,
   img: 'url'
 }]
+
+const viewC = new ViewController(data, 'card', 'card__content');
+
+
+
+window.onload = function () {
+  document.querySelector('.app').innerHTML = viewC.render();
+};
+
 
 
 
