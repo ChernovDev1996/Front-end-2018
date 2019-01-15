@@ -74,10 +74,6 @@ class ViewController {
     `
   }
 
-  sortData(data) {
-
-  }
-
   m1() {
     return this;
   }
