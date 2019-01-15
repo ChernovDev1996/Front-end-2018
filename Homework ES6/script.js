@@ -108,6 +108,7 @@ const viewC = new ViewController(data, 'card', 'card__content');
 
 window.onload = function () {
   document.querySelector('.app').innerHTML = viewC.render();
+
 };
 
 
