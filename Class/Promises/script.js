@@ -66,11 +66,10 @@ window.onload = function () {
 
       if (flag == true) {
         resolve('Enter numbers into the field');
+      } else if (flag == false) {
+        reject('Some error');
       }
-      setTimeout(() => {
-        flag = false;
-        reject('See your nums in console');
-      }, 5000)
+
     }, 1000)
 
   })
@@ -84,12 +83,27 @@ window.onload = function () {
           inputNums.value = '';
 
         });
-      },
-      (msgRej) => {
-        alert(msgRej);
-        console.log(arr);
+        return arr;
       }
     )
+    .then((arrayPassed) => {
+      setTimeout(() => {
+        alert("Time's up, see items in console");
+        arrayChecker(arrayPassed);
+        console.log(arrayPassed);
+      }, 10000)
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+}
+
+function arrayChecker(arrToCheck) {
+  arrToCheck.forEach((item, index) => {
+    if (isNaN(item)) {
+      console.error(`${item} under index ${index} is not a num, recheck`);
+    }
+  });
 }
 // 1) Написать промис, который будет запрашивать ввод с клавиатуры чисел(использовать тэг input, с очисткой после каждого ввода), которые сохранит в массив.
 // Закончить запрос чисел необходимо тогда, когда закончится время.Время - 10 сек.После этого - выполнить операцию, которая выведет массив в консоль.
