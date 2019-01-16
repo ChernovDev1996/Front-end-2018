@@ -1,6 +1,6 @@
 class Elem {
   constructor(selector) {
-    this.selector = selector;
+    this.selector = document.querySelector(selector);
   }
   html(symbol) {
     this.selector.innerHTML = symbol;
@@ -21,6 +21,6 @@ class Elem {
 }
 
 window.onload = function () {
-  var elem = new Elem(document.querySelector('.target'))
+  var elem = new Elem('.target')
   elem.html('Hello').appendSym('!').prependSym('George, ').attr('class', 'www').attr('title', 'hello');
 };
