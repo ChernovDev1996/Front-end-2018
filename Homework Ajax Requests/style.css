@@ -1,0 +1,25 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 760px;
+
+    height: 80vh;
+    background-color: azure;
+}
+
+.userdata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin: 10% auto;
+}
+
+.userdata__name {
+    margin: 15px;
+    max-width: 50%;
+}
+
+.userdata__age {
+    margin: 15px;
+    max-width: 50%;
+}

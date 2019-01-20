@@ -1,0 +1,13 @@
+{
+    "arrDataOne": [{
+            "name": "boris"
+        },
+        {
+            "surname": "petrov"
+        },
+        {
+            "birth": 1996
+        }
+    ]
+
+}
