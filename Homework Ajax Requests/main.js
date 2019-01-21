@@ -1,56 +1,64 @@
-// 1
-// function formValidation(inputNameOne, inputNameTwo, submitBtn) {
-//     inputNameOne = document.forms[0].elements[inputNameOne];
-//     inputNameTwo = document.forms[0].elements[inputNameTwo];
-//     submitBtn = document.forms[0].elements[submitBtn];
+1
+function formValidation(inputNameOne, inputNameTwo, submitBtn) {
+    // inputNameOne = document.forms[0].elements[inputNameOne];
+    // inputNameTwo = document.forms[0].elements[inputNameTwo];
+    // submitBtn = document.forms[0].elements[submitBtn];
 
-//     var inputOneArr = Array.from(inputNameOne.value);
-//     for (let i = 0; i < inputOneArr.length; i++) {
-//         if (!isNaN(inputOneArr[i])) {
-//             return false;
-//         }
-//     }
-//     if (isNaN(inputNameTwo.value)) {
-//         return false;
-//     }
-//     return true;
-// }
 
-// function doAjaxPost(method, url) {
-//     return new Promise((resolve, reject) => {
-//         let xhr = new XMLHttpRequest;
+    inputNameOne = document.querySelector(inputNameOne);
+    inputNameTwo = document.querySelector(inputNameTwo);
+    submitBtn = document.querySelector(submitBtn);
 
-//         xhr.open(method, url);
 
-//         xhr.send();
+    var inputOneArr = Array.from(inputNameOne.value);
+    for (let i = 0; i < inputOneArr.length; i++) {
+        if (!isNaN(inputOneArr[i])) {
+            return false;
+        }
+    }
+    if (isNaN(inputNameTwo.value)) {
+        return false;
+    }
+    return true;
+}
 
-//         xhr.onreadystatechange = function () {
-//             if (this.readyState != 4 || this.status != 200) {
-//                 reject(`There is an error ${this.readyState} and ${this.status}`);
-//             }
-//             resolve(this.response);
-//         }
-//     });
-// }
+function doAjaxPost(method, url, body) {
+    return new Promise((resolve, reject) => {
+        let xhr = new XMLHttpRequest;
 
-// window.onload = function () {
-//     const submitForm = document.forms[0];
-//     submitForm.addEventListener('submit', function (event) {
-//         event.preventDefault();
+        xhr.open(method, url);
 
-//         if (formValidation('username', 'userage', 'submitBtn') == true) {
-//             doAjaxPost('POST', '/registration')
-//                 .catch(error => {
-//                     console.log(error);
-//                 });
-//         }
 
-//         else {
-//             console.log(`Wrong with form validation: ${formValidation('username', 'userage', 'submitBtn')}`)
-//         }
 
-//     });
-// }
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState != 4 || this.status != 200) {
+                reject(`There is an error ${this.readyState} and ${this.status}`);
+            }
+            resolve(this.response);
+        }
+        const body = xhr.response
+        xhr.send(body);
+    });
+}
+
+window.onload = function () {
+    const submitForm = document.forms[0];
+    submitForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (formValidation('.userdata__name', '.userdata__age', '.btn__sbmt') == true) {
+            doAjaxPost('POST', '/registration')
+                .catch(error => {
+                    console.log(error);
+                });
+        }
+
+        else {
+            console.log(`Wrong with form validation: ${formValidation('username', 'userage', 'submitBtn')}`)
+        }
+    });
+}
 
 
 // 2
