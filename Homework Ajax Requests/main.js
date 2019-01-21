@@ -1,9 +1,13 @@
 1
 function formValidation(inputNameOne, inputNameTwo, submitBtn) {
-    inputNameOne = document.forms[0].elements[inputNameOne];
-    inputNameTwo = document.forms[0].elements[inputNameTwo];
-    submitBtn = document.forms[0].elements[submitBtn];
+//     inputNameOne = document.forms[0].elements[inputNameOne];
+//     inputNameTwo = document.forms[0].elements[inputNameTwo];
+//     submitBtn = document.forms[0].elements[submitBtn];
 
+    inputNameOne = document.querySelector(inputNameOne);
+    inputNameTwo = document.querySelector(inputNameTwo);
+    submitBtn = document.querySelector(submitBtn);
+    
     var inputOneArr = Array.from(inputNameOne.value);
     for (let i = 0; i < inputOneArr.length; i++) {
         if (!isNaN(inputOneArr[i])) {
@@ -38,7 +42,7 @@ window.onload = function () {
     submitForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        if (formValidation('username', 'userage', 'submitBtn') == true) {
+        if (formValidation('.userdata__name', '.userdata__age', '.btn__sbmt') == true) {
             doAjaxPost('POST', '/registration')
                 .catch(error => {
                     console.log(error);
