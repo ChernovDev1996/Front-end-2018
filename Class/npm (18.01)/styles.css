@@ -1,0 +1,8 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 760px;
+
+    height: 80vh;
+    background-color: azure;
+}
+
