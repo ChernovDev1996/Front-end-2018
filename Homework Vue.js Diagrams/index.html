@@ -16,8 +16,10 @@
     <div class="wrapper">
         <div id="app">
            <diagramcomponent
-           :count="instances"
+           v-for="(item, index) in instances"
+           :id="'diagram-'+index" class="diagramComp"
            ></diagramcomponent> 
+           <buttoncomponent :instances-diagrams='instances'></buttoncomponent>
         </div>
     </div>
 
