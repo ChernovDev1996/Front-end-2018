@@ -1,0 +1,17 @@
+[
+    {"color": "red",
+    "title": "red-apple-22",
+    "price": "22$ per kg"},
+    {"color": "yellow",
+    "title": "yellow-pears-25",
+    "price": "25$ per kg"},
+    {"color": "blue",
+    "title": "blue-plums-10",
+    "price": "10$ per kg"},
+    {"color": "green",
+    "title": "green-peas-6",
+    "price": "6$ per kg"},
+    {"color": "orange",
+    "title": "orange-tangerines-10",
+    "price": "10$ per kg"}
+]
